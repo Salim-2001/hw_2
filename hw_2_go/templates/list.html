@@ -1,0 +1,16 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<form action="/search/">
+    <input type='text' name="profile">
+    <input type="submit" name="search">
+</form>
+<h1>Все кандидаты</h1>
+{% for item in candidates %}
+    <p><a href="/candidate/{{ item.id }}">{{ item["name"] }}</a></p>
+{% endfor %}
+</body>
+</html>
